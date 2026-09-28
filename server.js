@@ -8,7 +8,7 @@ const PORT = Number(process.env.PORT || 17730)
 app.use(require('cors')())
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
-app.use(express.static(path.join(__dirname, 'public'), {
+app.use(express.static(path.join(__dirname, 'index.html'), {
   etag: true,
   lastModified: true,
   setHeaders: (res, filePath) => {
